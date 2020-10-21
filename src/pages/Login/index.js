@@ -3,7 +3,6 @@ import {
   View,
   Text,
   TextInput,
-  Button,
   Image,
   KeyboardAvoidingView,
   TouchableOpacity,
@@ -35,7 +34,7 @@ export default function Login({ navigation}){
             />
         </View>
 
-        <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('Cadastro')}>
+        <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('List')}>
             <Text style={styles.submitText}>Acessar</Text>
         </TouchableOpacity>
 

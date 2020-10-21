@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from './src/pages/Login/';
 import Cadastro from './src/pages/Cadastro/';
+import List from './src/pages/List/';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,16 @@ function App() {
           component={Cadastro}
           options={{
             title:'Cadastro',
+            headerStyle: {
+              backgroundColor: 'gray'
+            },
+          }} 
+        />
+        <Stack.Screen 
+          name="List" 
+          component={List}
+          options={{
+            title:'Listagem',
             headerStyle: {
               backgroundColor: 'gray'
             },
