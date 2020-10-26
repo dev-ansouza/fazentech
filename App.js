@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/pages/Login/';
 import Cadastro from './src/pages/Cadastro/';
 import List from './src/pages/List/';
+import Cart from './src/pages/Cart';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,16 @@ function App() {
           component={List}
           options={{
             title:'Listagem',
+            headerStyle: {
+              backgroundColor: 'gray'
+            },
+          }} 
+        />
+        <Stack.Screen 
+          name="Cart" 
+          component={Cart}
+          options={{
+            title:'Carrinho',
             headerStyle: {
               backgroundColor: 'gray'
             },
