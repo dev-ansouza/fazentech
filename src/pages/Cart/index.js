@@ -1,8 +1,5 @@
 import React from 'react';
-import { Component } from 'react';
-import { View, FlatList, StyleSheet, Image, Text, TextInput, TouchableOpacity, Button} from 'react-native';
-import NumericInput from 'react-native-numeric-input';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import { View, FlatList, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
 export default function Cart( {navigation} ) {
 
@@ -15,10 +12,6 @@ export default function Cart( {navigation} ) {
   return (
       
     <View style={styles.container}>
-
-        {/* <View style={{ alignItems:'center',justifyContent:'center', marginBottom: 3, borderBottomColor: 'gray', borderBottomWidth: 1}}>
-          <Text style={{fontSize: 30, margin: 10}}>Selecione a quantidade desejada de cada item:</Text>
-        </View> */}
 
         <FlatList 
             data={dados}
@@ -41,7 +34,7 @@ export default function Cart( {navigation} ) {
         </View>
 
         <View style={{ alignItems:'center',justifyContent:'center', marginBottom: 3, borderTopColor: 'white', borderTopWidth: 1}}>
-          <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('List')}>
+          <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('Request')}>
             <Text style={styles.submitText}>Enviar pedido</Text>
           </TouchableOpacity>
         </View>

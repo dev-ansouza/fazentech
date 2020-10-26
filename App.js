@@ -6,6 +6,7 @@ import Login from './src/pages/Login/';
 import Cadastro from './src/pages/Cadastro/';
 import List from './src/pages/List/';
 import Cart from './src/pages/Cart';
+import Request from './src/pages/Request';
 
 const Stack = createStackNavigator();
 
@@ -48,6 +49,16 @@ function App() {
           component={Cart}
           options={{
             title:'Carrinho',
+            headerStyle: {
+              backgroundColor: 'gray'
+            },
+          }} 
+        />
+        <Stack.Screen 
+          name="Request" 
+          component={Request}
+          options={{
+            title:'Pedido',
             headerStyle: {
               backgroundColor: 'gray'
             },

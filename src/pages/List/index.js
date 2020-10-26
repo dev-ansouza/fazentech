@@ -1,27 +1,7 @@
 import React from 'react';
-import { Component } from 'react';
-import { View, FlatList, StyleSheet, Image, Text, TextInput, TouchableOpacity, Button} from 'react-native';
-import NumericInput from 'react-native-numeric-input';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import { View, FlatList, StyleSheet, Image, Text, TouchableOpacity, Button} from 'react-native';
 
 export default function List( {navigation} ) {
-
-  // onSub = (item, index) => {
-  //   this.setState({
-  //     quantity: this.state.quantity - 1 
-  //   })
-  // }
-
-  // onAdd = (item, index) => {
-  // //   this.setState({
-  // //     quantity: this.state.quantity + 1
-  // //   })
-
-  // console.log(item, index);
-  //   const dados = [this.state.dados];
-  //   dados[index].quantity += 1;
-  //   this.setState ({dados});
-  // }
 
   const dados = [
     {key: 'Banana', price: 'R$ 1,99 / Und.', quantity: 0, image: 'https://feiradoceasa.com.br/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/b/a/banana-nanica-1kg_6_2.jpg'},
@@ -42,7 +22,7 @@ export default function List( {navigation} ) {
 
         <FlatList 
             data={dados}
-            renderItem= {( {item, index}) => 
+            renderItem= {( {item}) => 
               <View style={{flex: 1, flexDirection: 'row', marginBottom: 3, borderBottomColor: 'gray', borderBottomWidth: 1}}>
                 <Image source={{uri: item.image}} style={{width: 80, height: 80, margin: 5}}/>
                 <View style={{flex: 1, flexDirection: 'row', marginBottom: 3, width: '100%'}}>
@@ -51,11 +31,6 @@ export default function List( {navigation} ) {
                   </Text>   
                   <Text style={{fontSize: 18, marginTop: 30, marginLeft: 30, color: 'red'}}>{item.price}</Text>
                 </View>
-                {/* <View style={{flexDirection: 'row', flex: 1, alignItems: 'center', marginLeft: 80}}>
-                  <Button title="Sub" onPress={this.onSub(item, index)}  />
-                  <Text style={{fontSize: 20}}>  {item.quantity}  </Text>
-                  <Button title="Add" onPress={this.onAdd(item, index)} />
-                </View> */}
               </View>
             }          
         />
