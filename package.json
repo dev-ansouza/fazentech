@@ -14,13 +14,16 @@
     "@react-navigation/native": "^5.7.6",
     "@react-navigation/stack": "^5.9.3",
     "react": "16.13.1",
+    "react-input-number": "^5.0.19",
     "react-native": "0.63.3",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-numeric-input": "^1.8.3",
+    "react-native-pixel-perfect": "^1.0.2",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.11.0",
-    "react-native-vector-icons": "^7.1.0"
+    "react-native-vector-icons": "^7.1.0",
+    "rmc-input-number": "^1.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

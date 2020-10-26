@@ -1,7 +1,10 @@
 import React from 'react';
-import { View, FlatList, StyleSheet, Image, Text, TouchableOpacity, Button} from 'react-native';
+import { View, FlatList, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
+import NumericInput from 'react-native-numeric-input'
 
 export default function List( {navigation} ) {
+
+  const [num, setNum] = React.useState(2.2);
 
   const dados = [
     {key: 'Banana', price: 'R$ 1,99 / Und.', quantity: 0, image: 'https://feiradoceasa.com.br/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/b/a/banana-nanica-1kg_6_2.jpg'},
@@ -30,6 +33,20 @@ export default function List( {navigation} ) {
                     {item.key}
                   </Text>   
                   <Text style={{fontSize: 18, marginTop: 30, marginLeft: 30, color: 'red'}}>{item.price}</Text>
+                  <View style={{marginLeft: 10, marginTop: 20}}>
+                    <NumericInput
+                      totalWidth={80} 
+                      totalHeight={40} 
+                      iconSize={25}
+                      step={1}
+                      valueType='real'
+                      rounded 
+                      textColor='black' 
+                      iconStyle={{ color: 'white' }} 
+                      rightButtonBackgroundColor='blue' 
+                      leftButtonBackgroundColor='red'
+                    />
+                  </View>
                 </View>
               </View>
             }          
